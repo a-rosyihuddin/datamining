@@ -1,10 +1,8 @@
 # Selamat Datang Di Buku Tugas Data Mining
 
-Nama    : Ahmad Rosyihuddin
-
-NIM     : 200411100126
-
-Kelas   : Data Mining A
+## Nama    : Ahmad Rosyihuddin 
+## NIM     : 200411100126
+## Kelas   : Data Mining A
 
 Apa sih Data Mining Itu??
 
