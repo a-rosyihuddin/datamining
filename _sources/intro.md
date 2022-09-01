@@ -1,11 +1,10 @@
-# Welcome to your Jupyter Book
+# Selamat Datang Di Buku Tugas Data Mining
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Nama    : Ahmad Rosyihuddin
+NIM     : 200411100126
+Kelas   : Data Mining A
 
-Check out the content pages bundled with this sample book to see more.
+Apa sih Data Mining Itu??
+Data mining adalah proses pengumpulan dan pengolahan data yang bertujuan untuk mengekstrak informasi penting pada data. Proses pengumpulan dan ekstraksi informasi tersebut dapat dilakukan menggunakan perangkat lunak dengan bantuan perhitungan statistika, matematika, ataupun teknologi Artificial Intelligence (AI). Data mining sering disebut juga Knowledge Discovery in Database (KDD). - [Source](https://www.dicoding.com/blog/apa-itu-data-mining/)
 
-```{tableofcontents}
-```
+Follow [My Instagram](https://www.instagram.com/kaji_sik/)
