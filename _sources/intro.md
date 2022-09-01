@@ -1,5 +1,6 @@
-# Selamat Datang Di Buku Tugas Data Mining
+# Home Page
 # Data Diri
+Selamat datang di buku tugas data mining,perkenalkan saya:
 Nama    : Ahmad Rosyihuddin  
 NIM     : 200411100126  
 Kelas   : Data Mining A   
