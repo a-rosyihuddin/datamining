@@ -460,85 +460,57 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/edwardlib/observations/master/src/r/datasets.csv&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/carData/WVS.csv&quot;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 1131 entries, 0 to 1130
-Data columns (total 11 columns):
- #   Column            Non-Null Count  Dtype 
----  ------            --------------  ----- 
- 0   no                1131 non-null   int64 
- 1   package           1131 non-null   object
- 2   item              1131 non-null   object
- 3   title             1131 non-null   object
- 4   rows              1131 non-null   int64 
- 5   cols              1131 non-null   int64 
- 6   remote_base_url   1131 non-null   object
- 7   remote_file_name  1131 non-null   object
- 8   function_name     1131 non-null   object
- 9   local_file_name   1131 non-null   object
- 10  rst_files         1131 non-null   object
-dtypes: int64(3), object(8)
-memory usage: 97.3+ KB
+RangeIndex: 5381 entries, 0 to 5380
+Data columns (total 7 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Unnamed: 0  5381 non-null   int64 
+ 1   poverty     5381 non-null   object
+ 2   religion    5381 non-null   object
+ 3   degree      5381 non-null   object
+ 4   country     5381 non-null   object
+ 5   age         5381 non-null   int64 
+ 6   gender      5381 non-null   object
+dtypes: int64(2), object(5)
+memory usage: 294.4+ KB
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;rows&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
 <span class="n">data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        144
-1        150
-2          6
-3        237
-4          6
-        ... 
-1126     526
-1127     935
-1128    4360
-1129     286
-1130      21
-Name: rows, Length: 1131, dtype: int64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;cols&#39;</span><span class="p">]</span>
-<span class="n">data1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        2
-1        2
-2        2
-3        2
-4        2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       44
+1       40
+2       36
+3       25
+4       39
         ..
-1126    24
-1127    17
-1128    44
-1129    20
-1130     5
-Name: cols, Length: 1131, dtype: int64
+5376    49
+5377    37
+5378    54
+5379    32
+5380    36
+Name: age, Length: 5381, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -546,36 +518,17 @@ Name: cols, Length: 1131, dtype: int64
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik">
 <h1><strong>2. Membuat statistik dari data setiap atribut yang bertype numerik</strong><a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="median">
 <h1><strong>2.1 Median</strong><a class="headerlink" href="#median" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>43.0
 </pre></div>
 </div>
 </div>
@@ -585,24 +538,12 @@ Name: cols, Length: 1131, dtype: int64
 <h1><strong>2.2 Mean</strong><a class="headerlink" href="#mean" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1754.2908930150309
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.070733863837312
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45.04107043300502
 </pre></div>
 </div>
 </div>
@@ -612,35 +553,14 @@ Name: cols, Length: 1131, dtype: int64
 <h1><strong>2.3 Modus</strong><a class="headerlink" href="#modus" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">StatisticsError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">14</span><span class="n">bfd2062992</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3.7/statistics.py</span> in <span class="ni">mode</span><span class="nt">(data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>     <span class="k">elif</span> <span class="n">table</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span>         <span class="k">raise</span> <span class="n">StatisticsError</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">506</span>                 <span class="s1">&#39;no unique mode; found </span><span class="si">%d</span><span class="s1"> equally common values&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">507</span>                 <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">508</span>     <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">StatisticsError</span>: no unique mode; found 2 equally common values
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    30
+1    35
+dtype: int64
 </pre></div>
 </div>
 </div>
@@ -655,19 +575,7 @@ Name: cols, Length: 1131, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.06760492461145587
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.087620806333575
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3921545899877039
 </pre></div>
 </div>
 </div>
@@ -693,23 +601,7 @@ Name: cols, Length: 1131, dtype: int64
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/Tugas 1_21_1.png" src="_images/Tugas 1_21_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
-  warnings.warn(msg, FutureWarning)
-</pre></div>
-</div>
-<img alt="_images/Tugas 1_22_1.png" src="_images/Tugas 1_22_1.png" />
+<img alt="_images/Tugas 1_15_1.png" src="_images/Tugas 1_15_1.png" />
 </div>
 </div>
 </section>
