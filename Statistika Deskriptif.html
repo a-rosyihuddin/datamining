@@ -313,12 +313,63 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   1. Membaca data dari url
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik">
+   2. Membuat statistik dari data setiap atribut yang bertype numerik
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     2.1 Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean">
+     2.2 Mean
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modus">
+     2.3 Modus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+   3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -330,6 +381,46 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url">
+   1. Membaca data dari url
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik">
+   2. Membuat statistik dari data setiap atribut yang bertype numerik
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#median">
+     2.1 Median
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean">
+     2.2 Mean
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modus">
+     2.3 Modus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+   3. Mendeskripsikan kemiringan / skwened dari data setiap variabel
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -339,7 +430,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="statistika-deskriptif">
 <h1>Statistika Deskriptif<a class="headerlink" href="#statistika-deskriptif" title="Permalink to this headline">#</a></h1>
-<p>##1. Membaca data dari url</p>
+<section id="membaca-data-dari-url">
+<h2>1. Membaca data dari url<a class="headerlink" href="#membaca-data-dari-url" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -397,8 +489,11 @@ Name: age, Length: 5381, dtype: int64
 </div>
 </div>
 </div>
-<p>##2. Membuat statistik dari data setiap atribut yang bertype numerik</p>
-<p>###2.1 Median</p>
+</section>
+<section id="membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik">
+<h2>2. Membuat statistik dari data setiap atribut yang bertype numerik<a class="headerlink" href="#membuat-statistik-dari-data-setiap-atribut-yang-bertype-numerik" title="Permalink to this headline">#</a></h2>
+<section id="median">
+<h3>2.1 Median<a class="headerlink" href="#median" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -411,7 +506,9 @@ Name: age, Length: 5381, dtype: int64
 </div>
 </div>
 </div>
-<p>###2.2 Mean</p>
+</section>
+<section id="mean">
+<h3>2.2 Mean<a class="headerlink" href="#mean" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -424,7 +521,9 @@ Name: age, Length: 5381, dtype: int64
 </div>
 </div>
 </div>
-<p>###2.3 Modus</p>
+</section>
+<section id="modus">
+<h3>2.3 Modus<a class="headerlink" href="#modus" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
@@ -439,7 +538,10 @@ dtype: int64
 </div>
 </div>
 </div>
-<p>##3. Mendeskripsikan kemiringan / skwened dari data setiap variabel</p>
+</section>
+</section>
+<section id="mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel">
+<h2>3. Mendeskripsikan kemiringan / skwened dari data setiap variabel<a class="headerlink" href="#mendeskripsikan-kemiringan-skwened-dari-data-setiap-variabel" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">()</span>
@@ -476,6 +578,7 @@ dtype: int64
 <img alt="_images/Statistika Deskriptif_15_1.png" src="_images/Statistika Deskriptif_15_1.png" />
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
