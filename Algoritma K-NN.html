@@ -338,12 +338,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data-iris-dari-library-scikit-learn">
+   Load Data Iris dari library Scikit Learn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#splitting-data">
+   Splitting Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   Modeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisasi-data">
+   Visualisasi Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-data-baru">
+   Testing Data Baru
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -355,6 +399,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data-iris-dari-library-scikit-learn">
+   Load Data Iris dari library Scikit Learn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#splitting-data">
+   Splitting Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   Modeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisasi-data">
+   Visualisasi Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-data-baru">
+   Testing Data Baru
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -364,6 +441,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="algoitma-k-nn">
 <h1>Algoitma K-NN<a class="headerlink" href="#algoitma-k-nn" title="Permalink to this headline">#</a></h1>
+<section id="load-data-iris-dari-library-scikit-learn">
+<h2>Load Data Iris dari library Scikit Learn<a class="headerlink" href="#load-data-iris-dari-library-scikit-learn" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
@@ -374,18 +453,6 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sklearn.utils.Bunch
 </pre></div>
 </div>
 </div>
@@ -653,6 +720,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="splitting-data">
+<h2>Splitting Data<a class="headerlink" href="#splitting-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># splitting the data into training and test sets (80:20)</span>
@@ -692,6 +762,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
@@ -748,6 +821,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="visualisasi-data">
+<h2>Visualisasi Data<a class="headerlink" href="#visualisasi-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -764,9 +840,12 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/Algoritma K-NN_18_1.png" src="_images/Algoritma K-NN_18_1.png" />
+<img alt="_images/Algoritma K-NN_21_1.png" src="_images/Algoritma K-NN_21_1.png" />
 </div>
 </div>
+</section>
+<section id="testing-data-baru">
+<h2>Testing Data Baru<a class="headerlink" href="#testing-data-baru" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -803,6 +882,7 @@ setosa
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
