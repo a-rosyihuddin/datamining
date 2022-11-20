@@ -338,12 +338,61 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-menggunakan-library-pandas">
+   Preprocessing Menggunakan Library Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inisialisasi-data-ke-dalam-variabel-x-dan-y">
+   Inisialisasi Data ke dalam variabel X dan Y
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   Modeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acuration-testing">
+   Acuration Testing
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -355,6 +404,44 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dasar-teori">
+   Dasar Teori
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-menggunakan-library-pandas">
+   Preprocessing Menggunakan Library Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inisialisasi-data-ke-dalam-variabel-x-dan-y">
+   Inisialisasi Data ke dalam variabel X dan Y
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   Modeling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acuration-testing">
+   Acuration Testing
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -364,6 +451,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="k-means">
 <h1>K-Means<a class="headerlink" href="#k-means" title="Permalink to this headline">#</a></h1>
+<section id="dasar-teori">
+<h2>Dasar Teori<a class="headerlink" href="#dasar-teori" title="Permalink to this headline">#</a></h2>
+<p>K-Means merupakan algoritma yang umum digunakan untuk clustering dokumen. Prinsip utama K-Means adalah menyusun k prototype atau pusat massa
+(centroid) dari sekumpulan data berdimensi. Sebelum diterapkan proses algoritma
+K-means, dokumen akan di preprocessing terlebih dahulu. Kemudian dokumen direpresentasikan sebagai vektor yang memiliki term dengan nilai tertentu.</p>
+</section>
+<section id="load-dataset">
+<h2>Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
@@ -386,7 +481,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c14e38d1-a6fa-429b-851b-f629e7f956c8">
+  <div id="df-e2a6c0be-ba78-49f5-8e50-35e8dfb2a7f2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -457,7 +552,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c14e38d1-a6fa-429b-851b-f629e7f956c8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e2a6c0be-ba78-49f5-8e50-35e8dfb2a7f2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -508,12 +603,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c14e38d1-a6fa-429b-851b-f629e7f956c8 button.colab-df-convert');
+          document.querySelector('#df-e2a6c0be-ba78-49f5-8e50-35e8dfb2a7f2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c14e38d1-a6fa-429b-851b-f629e7f956c8');
+          const element = document.querySelector('#df-e2a6c0be-ba78-49f5-8e50-35e8dfb2a7f2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -534,19 +629,13 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+</section>
+<section id="preprocessing-menggunakan-library-pandas">
+<h2>Preprocessing Menggunakan Library Pandas<a class="headerlink" href="#preprocessing-menggunakan-library-pandas" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">irisdata</span><span class="p">[</span><span class="s1">&#39;Class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">])</span>
 <span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">irisdata</span><span class="p">[</span><span class="s2">&quot;Class&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from sklearn import preprocessing</span>
-<span class="c1"># le = preprocessing.LabelEncoder()</span>
-<span class="c1"># irisdata[&#39;Class&#39;] = le.fit_transform(y)</span>
 </pre></div>
 </div>
 </div>
@@ -559,7 +648,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1271ae91-754c-4e46-b333-204aa20e0c44">
+  <div id="df-c98020ef-d30f-4989-a5da-c3938f2a647a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -630,7 +719,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1271ae91-754c-4e46-b333-204aa20e0c44')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c98020ef-d30f-4989-a5da-c3938f2a647a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -681,12 +770,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-1271ae91-754c-4e46-b333-204aa20e0c44 button.colab-df-convert');
+          document.querySelector('#df-c98020ef-d30f-4989-a5da-c3938f2a647a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1271ae91-754c-4e46-b333-204aa20e0c44');
+          const element = document.querySelector('#df-c98020ef-d30f-4989-a5da-c3938f2a647a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -707,6 +796,10 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+</section>
+<section id="inisialisasi-data-ke-dalam-variabel-x-dan-y">
+<h2>Inisialisasi Data ke dalam variabel X dan Y<a class="headerlink" href="#inisialisasi-data-ke-dalam-variabel-x-dan-y" title="Permalink to this headline">#</a></h2>
+<p>data X merupakan dataset dari Iris sedangkan Y merupakan class atau label</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">irisdata</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
@@ -715,6 +808,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
@@ -767,6 +863,9 @@ Iris-versicolor       0.77      0.96      0.86        50
 </div>
 </div>
 </div>
+</section>
+<section id="acuration-testing">
+<h2>Acuration Testing<a class="headerlink" href="#acuration-testing" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
@@ -780,6 +879,7 @@ Iris-versicolor       0.77      0.96      0.86        50
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
