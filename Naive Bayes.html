@@ -451,6 +451,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes">
 <h1>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">#</a></h1>
+<p>Metode yang juga dikenal sebagai Naive Bayes Classifier ini menerapkan teknik supervised klasifikasi objek di masa depan dengan menetapkan label kelas ke instance/catatan menggunakan probabilitas bersyarat. Probabilitas bersyarat adalah ukuran peluang suatu peristiwa yang terjadi berdasarkan peristiwa lain yang telah (dengan asumsi, praduga, pernyataan, atau terbukti) terjadi</p>
+<p>Rumus: P(A│B) = P(B│A)P(A)P(B)</p>
+<p>Keterangan:</p>
+<p>P(A│B) : Probabilitas A terjadi dengan bukti bahwa B telah terjadi (probabilitas superior)</p>
+<p>P(B│A) : Probabilitas B terjadi dengan bukti bahwa A telah terjadi</p>
+<p>P(A) : Peluang terjadinya A</p>
+<p>P(B) : Peluang terjadinya B</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -539,7 +546,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8384070a-0761-4400-870f-33b2c98939b5">
+  <div id="df-62727dad-4ae3-4203-94e0-703b194f519c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1050,7 +1057,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8384070a-0761-4400-870f-33b2c98939b5')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-62727dad-4ae3-4203-94e0-703b194f519c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1101,12 +1108,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8384070a-0761-4400-870f-33b2c98939b5 button.colab-df-convert');
+          document.querySelector('#df-62727dad-4ae3-4203-94e0-703b194f519c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8384070a-0761-4400-870f-33b2c98939b5');
+          const element = document.querySelector('#df-62727dad-4ae3-4203-94e0-703b194f519c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
